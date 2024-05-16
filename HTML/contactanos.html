@@ -5,23 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Jersey+20&family=Lilita+One&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- header  -->
-    <header>
+<header>
+  <img id="logo" src="../IMAGES/logo.webp">
+  <h1 id="Nombre">COSTEÑIX</h1>
 
-        <ul>
-            <li><a href="../HTML/index.html">Inicio</a></li>
-            <li><a href="../HTML/categorias.html">Categorias</a></li>
-            <li><a href="../HTML/contactanos.html">Contactanos</a></li>
-        </ul>
+  <ul class="etiquetas" >
+      <li class="niveles"><a href="../HTML/index.html">Inicio</a></li>
+      <li class="niveles"><a href="../HTML/categorias.html">Categorias</a></li>
+      <li class="niveles"><a href="../HTML/contactanos.html">Contactanos</a></li>
+  </ul>
 
-    </header>
+</header>
 
     <div>
         <form>
           <label for="Nombre">Escriba su nombre</label>
           <input type="text" id="fname" name="firstname" placeholder="Eva">
+
+          <label for="Nombre">Escriba su apedillo</label>
+          <input type="text" id="fname" name="firstname" placeholder="Fajardo">
       
           <label for="Email">Correo</label>
           <input type="email" id="lname" name="lastname" placeholder="Eva@.com">
@@ -30,13 +45,34 @@
           <select id="country" name="country">
             <option value="Bogota">Bogota</option>
             <option value="Valledupar">Valledupar</option>
-            <option value="Bucaramanga">Bucaramanga</option>
+            <option value="Aguachica">Aguachica</option>
+            <option value="Barranquilla">Barranquilla</option>
           </select>
         
           <input type="submit" value="Enviar">
         </form>
       </div>
 
+      <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Contacto</h3>
+                <p>Email: Eva@gmail.com</p>
+                <p>Tel: +57 304 348 47 78</p>
+                
+            </div>
+            <div class="footer-content">
+                <h3>Siguenos</h3>
+                <div class="redes-link">
+                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                   <li> <a href=""><i class="fab fa-instagram"></i></a></li>
+                   <li> <a href=""><i class="fab fa-whatsapp"></i></a></li>
+                </div>
+            </div>
     
+        </div>
+
+
+    </footer>
 </body>
 </html>
