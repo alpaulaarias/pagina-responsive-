@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family:  "Exo 2", sans-serif;
+    list-style: none;
     
 } 
 
@@ -245,10 +246,10 @@ footer{
 
 .container{
     width: 100%;
-    margin: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-
+    padding: 10px;
 }
 .footer{
     width: 333%;
@@ -266,6 +267,7 @@ h3{
 .social-icons{
     text-align: center;
     padding: center;
+    list-style: none;
 }
 .social-icons li{
     display: inline;
@@ -275,7 +277,15 @@ h3{
 .social-icons i{
     color: white;
     font-size: 25px;
+}
 
+.redes-link {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+.redes-link a {
+    color: #9b3882;
 }
 
 a{
