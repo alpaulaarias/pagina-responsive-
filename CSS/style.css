@@ -119,6 +119,17 @@ div {
     padding: 20px;
 }
 
+.form-container {
+    padding: 5%;
+    background-color: #9b3882;
+}
+
+form {
+    border-radius: 20px;
+    background-color: #d0b0d4;
+    padding: 25px;
+}
+
 .card {
     position: relative;
     width: 300px;
