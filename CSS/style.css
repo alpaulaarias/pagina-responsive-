@@ -7,14 +7,6 @@
     
 } 
 
-/* body {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: rgb(209, 116, 218);
-} */
 
 .main-content {
     display: flex;
@@ -26,9 +18,12 @@
 }
 
 header{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
     width: 100%;
     top: 1px;
-    padding: 10px;
+    padding: 20px;
     color: #ccc;
     text-align: center;
     background: #000;
@@ -38,11 +33,11 @@ header{
     
 }
 #logo{
+    
     width: 180px;
     height: 180px;
     margin-top: 2%;
     border-radius: 70px;
-    margin-right: 220%;
     transition: transform 0.5;
     
 }
@@ -60,10 +55,9 @@ ul li a:hover{
    
 }
 #Nombre{
-    position: absolute;
-    top: 2%;
-    left: 190px;
-    font-size: 180px;
+    align-items: center;
+    display: flex;
+    font-size: 60px;
     color: rgb(12, 15, 10);
     font-family: "Lilita One", sans-serif;
     transition: transform 0.5;
@@ -81,9 +75,9 @@ ul li a:hover{
 
 }
 .etiquetas{
-    position: absolute;
-    top: 33%;
-    left: 79%;
+    align-items: center;
+    display: flex;
+   
     color: rgb(0, 0, 0);
 
 }
