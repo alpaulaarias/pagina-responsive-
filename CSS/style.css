@@ -108,6 +108,7 @@ input[type=text],[type=Email],select {
   }
   
 div {
+    
     border-radius: 5px;
     background-color: #d0b0d4;
     padding: 20px;
@@ -179,7 +180,6 @@ form {
 .card .back .link {
     border-top: solid 1px #f3f3f3;
     height: 50px;
-    line-height: 50px;
 }
 
 .card .back .link a {
