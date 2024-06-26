@@ -15,21 +15,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Jersey+20&family=Lilita+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-<link rel="stylesheet" href="../JS/jquery-3.7.1.js">
+<script src="../JS/libs/jquery-3.7.1.js"></script>
 </head>
-<script>
-    $(document).ready(function(){
-        $('#btn-menu').click(function(){
-            if( $ ('.btn-menu span').attr('class') =='fa fa-bars'){
-                $('.btn-menu span').removeClass('fa fa-bars').addClass('fa fa-close');
-                $('.etiquetas').css({'left':'0' });
-            }else{
-                $('.btn-menu span').removeClass('fa fa-close').addClass('fa fa-bars');
-                $('etiquetas').css({'left':'100%'});
-            }
-        })
-    })
-</script>
 <body>
 <!-- header  -->
     <header>
@@ -127,4 +114,5 @@
 
     </footer>
 </body>
+<script src="../JS/main.js"></script>
 </html>
