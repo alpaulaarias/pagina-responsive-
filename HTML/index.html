@@ -15,23 +15,43 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Jersey+20&family=Lilita+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link rel="stylesheet" href="../JS/jquery-3.7.1.js">
 </head>
+<script>
+    $(document).ready(function(){
+        $('#btn-menu').click(function(){
+            if( $ ('.btn-menu span').attr('class') =='fa fa-bars'){
+                $('.btn-menu span').removeClass('fa fa-bars').addClass('fa fa-close');
+                $('.etiquetas').css({'left':'0' });
+            }else{
+                $('.btn-menu span').removeClass('fa fa-close').addClass('fa fa-bars');
+                $('etiquetas').css({'left':'100%'});
+            }
+        })
+    })
+</script>
 <body>
 <!-- header  -->
     <header>
         <img id="logo" src="../IMAGES/logo.webp">
         <h1 id="Nombre">COSTEÑIX</h1>
-
-        <ul class="etiquetas" >
-            <li class="niveles"><a href="../HTML/index.html">Inicio</a></li>
-            <li class="niveles"><a href="../HTML/categorias.html">Categorias</a></li>
-            <li class="niveles"><a href="../HTML/contactanos.html">Contactanos</a></li>
-        </ul>
-
+        <nav class="menu">
+        <div class="icon-menu">
+            <a href="#" id="btn-menu" class="btn-menu"> <span class="fa fa-bars"></span></a>
+        </div>
+        <div class="etiquetas">
+            <ul>
+                <li class="niveles"><a href="../HTML/index.html">Inicio</a></li>
+                <li class="niveles"><a href="../HTML/categorias.html">Categorias</a></li>
+                <li class="niveles"><a href="../HTML/contactanos.html">Contactanos</a></li>
+            </ul>
+        </div>
+    </nav>
+        
     </header>
 
     <div class="Card-container">
-       <div class="Card">
+    <div class="Card">
         <img src="../IMAGES/peto.jpg" alt="">
         <div class="Card-content">
             <h3>Peto</h3>
@@ -43,9 +63,9 @@
                 vainilla opcional  </p>
                 <a href="" class="btn" >Mas...</a>
         </div>
-       </div> 
+    </div> 
 
-       <div class="Card">
+        <div class="Card">
         <img src="../IMAGES/mazamorra.jpg" alt="">
         <div class="Card-content">
             <h3>Mazamorra</h3>
@@ -53,9 +73,9 @@
                 perfecta para acompañar comidas de sal, como postre o para un desayuno o media tarde.</p>
                 <a href="" class="btn" >Mas...</a>
         </div>
-       </div>
+        </div>
 
-       <div class="Card">
+        <div class="Card">
         <img src="../IMAGES/yuca.jpg" alt="">
         <div class="Card-content">
             <h3>Carimañola</h3>
@@ -72,17 +92,17 @@
                 a base de leche de vaca entera y cuajo, cuya propiedad es separar la caseína (proteínas sólidas lácteas) del suero (proteínas líquidas).</p>
                 <a href="" class="btn" >Mas...</a>
         </div>
-       </div>
+        </div>
 
-       <div class="Card">
+        <div class="Card">
         <img src="../IMAGES/coco.jpg" alt="">
         <div class="Card-content">
             <h3>Arroz con coco</h3>
             <p> El arroz con coco es es una preparación
-                 de arroz blanco cocido junto a los extractos del coco. </p>
+                de arroz blanco cocido junto a los extractos del coco. </p>
                 <a href="" class="btn" >Mas...</a>
         </div>
-       </div>
+    </div>
     </div>
 
     <footer>
@@ -96,9 +116,9 @@
             <div class="footer-content2">
                 <h3>Siguenos</h3>
                 <div class="redes-link">
-                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                   <li> <a href=""><i class="fab fa-instagram"></i></a></li>
-                   <li> <a href=""><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                <li> <a href=""><i class="fab fa-instagram"></i></a></li>
+                <li> <a href=""><i class="fab fa-whatsapp"></i></a></li>
                 </div>
             </div>
     
