@@ -1,9 +1,15 @@
 $(document).ready(function () {
+    $('#logo').hover(function() {
+        $(this).css('transform', 'rotate(360deg)');
+    }, function() {
+        $(this).css('transform', 'rotate(0deg)');
+    });
+    
     // Manejo del botón de menú
     $('#btn-menu').click(function () {
         var $btnMenuSpan = $('.btn-menu span');
         var $etiquetas = $('.etiquetas');
-        
+
         if ($btnMenuSpan.hasClass('fa fa-bars')) {
             $btnMenuSpan.removeClass('fa fa-bars').addClass('fa fa-close');
             $etiquetas.css('left', '0');
@@ -19,13 +25,13 @@ $(document).ready(function () {
         var alturaVentana = $(window).height();
         var parteSuperiorElemento = $elemento.offset().top;
         var alturaElemento = $elemento.height();
-        
+
         return (parteSuperiorElemento + alturaElemento >= desplazamientoSuperior) && (parteSuperiorElemento <= desplazamientoSuperior + alturaVentana);
     }
 
     // Función para chequear la visibilidad de las tarjetas
     function chequearVisibilidad() {
-        $('.card').each(function() {
+        $('.card').each(function () {
             var $card = $(this);
             if (esVisible($card) && !$card.hasClass('visible')) {
                 $card.addClass('visible').fadeTo(1000, 1).css('transform', 'translateY(0)');
@@ -34,17 +40,31 @@ $(document).ready(function () {
     }
 
     // Eventos de scroll y resize para chequear visibilidad al cargar y al hacer scroll
-    $(window).on('scroll resize', function() {
+    $(window).on('scroll resize', function () {
         chequearVisibilidad();
     });
 
-    // Efecto de rebote al pasar el mouse sobre las tarjetas
-    $('.Card').hover(function() {
+    // Efecto de zoom al pasar el mouse sobre las tarjetas
+    $('.Card').hover(function () {
         $(this).animate({ marginTop: '-10px' }, 200);
-    }, function() {
+    }, function () {
         $(this).animate({ marginTop: '0' }, 200);
     });
 
+    // Animación al hacer hover sobre los botones del formulario
+    $('.button-form').hover(function() {
+        $(this).stop().animate({
+            backgroundColor: '#a2d2ff',
+            scale: '1.1'
+        }, 300); // Duración de la animación en milisegundos
+    }, function() {
+        $(this).stop().animate({
+            backgroundColor: '',
+            scale: '1'
+        }, 300); // Duración de la animación en milisegundos
+    });  
+  
+    
     // Chequear visibilidad al cargar la página
-    chequearVisibilidad(); 
+    chequearVisibilidad();
 });
