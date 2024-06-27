@@ -63,8 +63,9 @@ $(document).ready(function () {
             scale: '1'
         }, 300); // Duración de la animación en milisegundos
     });  
-  
-    
+
+    $('.form').hide();
+    $('.form').fadeIn(800);
     // Chequear visibilidad al cargar la página
     chequearVisibilidad();
 });
