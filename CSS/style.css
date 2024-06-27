@@ -159,6 +159,9 @@ form {
     width: 300px;
     height: 350px;
     margin: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition:transform 2s;
 }
 
 .card .face {
