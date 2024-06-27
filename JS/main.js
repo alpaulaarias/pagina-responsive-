@@ -1,13 +1,18 @@
 $(document).ready(function () {
+    // Manejo del botón de menú
     $('#btn-menu').click(function () {
-        if ($('.btn-menu span').attr('class') == 'fa fa-bars') {
-            $('.btn-menu span').removeClass('fa fa-bars').addClass('fa fa-close');
-            $('.etiquetas').css({ 'left': '0' });
+        var $btnMenuSpan = $('.btn-menu span');
+        var $etiquetas = $('.etiquetas');
+        
+        if ($btnMenuSpan.hasClass('fa fa-bars')) {
+            $btnMenuSpan.removeClass('fa fa-bars').addClass('fa fa-close');
+            $etiquetas.css('left', '0');
         } else {
-            $('.btn-menu span').removeClass('fa fa-close').addClass('fa fa-bars');
-            $('etiquetas').css({ 'left': '100%' });
+            $btnMenuSpan.removeClass('fa fa-close').addClass('fa fa-bars');
+            $etiquetas.css('left', '100%');
         }
-    })
+    });
+
     // Función para verificar si una tarjeta es visible en el viewport
     function esVisible($elemento) {
         var desplazamientoSuperior = $(window).scrollTop();
@@ -15,10 +20,10 @@ $(document).ready(function () {
         var parteSuperiorElemento = $elemento.offset().top;
         var alturaElemento = $elemento.height();
         
-        return ((parteSuperiorElemento + alturaElemento >= desplazamientoSuperior) && (parteSuperiorElemento <= (desplazamientoSuperior + alturaVentana)));
+        return (parteSuperiorElemento + alturaElemento >= desplazamientoSuperior) && (parteSuperiorElemento <= desplazamientoSuperior + alturaVentana);
     }
 
-    // Chequear la visibilidad de las tarjetas al cargar la página y al hacer scroll
+    // Función para chequear la visibilidad de las tarjetas
     function chequearVisibilidad() {
         $('.card').each(function() {
             var $card = $(this);
@@ -28,12 +33,18 @@ $(document).ready(function () {
         });
     }
 
-    $(window).on('scroll resize', chequearVisibilidad);
+    // Eventos de scroll y resize para chequear visibilidad al cargar y al hacer scroll
+    $(window).on('scroll resize', function() {
+        chequearVisibilidad();
+    });
+
+    // Efecto de rebote al pasar el mouse sobre las tarjetas
     $('.Card').hover(function() {
         $(this).animate({ marginTop: '-10px' }, 200);
     }, function() {
         $(this).animate({ marginTop: '0' }, 200);
     });
-    chequearVisibilidad(); 
 
+    // Chequear visibilidad al cargar la página
+    chequearVisibilidad(); 
 });
