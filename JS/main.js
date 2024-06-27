@@ -1,18 +1,21 @@
-$(document).ready(function () {
+$(document).ready(function() {
+
+    // Animación del logo al hacer hover
     $('#logo').hover(function() {
         $(this).css('transform', 'rotate(360deg)');
     }, function() {
         $(this).css('transform', 'rotate(0deg)');
     });
 
+    // Animación del tamaño del nombre al hacer hover
     $('#Nombre').hover(function() {
         $(this).animate({ fontSize: '65px' }, 200);
     }, function() {
         $(this).animate({ fontSize: '60px' }, 200);
     });
-    
+
     // Manejo del botón de menú
-    $('#btn-menu').click(function () {
+    $('#btn-menu').click(function() {
         var $btnMenuSpan = $('.btn-menu span');
         var $etiquetas = $('.etiquetas');
 
@@ -37,7 +40,7 @@ $(document).ready(function () {
 
     // Función para chequear la visibilidad de las tarjetas
     function chequearVisibilidad() {
-        $('.card').each(function () {
+        $('.card').each(function() {
             var $card = $(this);
             if (esVisible($card) && !$card.hasClass('visible')) {
                 $card.addClass('visible').fadeTo(1000, 1).css('transform', 'translateY(0)');
@@ -46,14 +49,14 @@ $(document).ready(function () {
     }
 
     // Eventos de scroll y resize para chequear visibilidad al cargar y al hacer scroll
-    $(window).on('scroll resize', function () {
+    $(window).on('scroll resize', function() {
         chequearVisibilidad();
     });
 
     // Efecto de zoom al pasar el mouse sobre las tarjetas
-    $('.Card').hover(function () {
+    $('.Card').hover(function() {
         $(this).animate({ marginTop: '-10px' }, 200);
-    }, function () {
+    }, function() {
         $(this).animate({ marginTop: '0' }, 200);
     });
 
@@ -62,16 +65,17 @@ $(document).ready(function () {
         $(this).stop().animate({
             backgroundColor: '#a2d2ff',
             scale: '1.1'
-        }, 300); 
+        }, 300);
     }, function() {
         $(this).stop().animate({
             backgroundColor: '',
             scale: '1'
-        }, 300); 
-    });  
+        }, 300);
+    });
 
-    $('.form').hide();
-    $('.form').fadeIn(900);
-    // Chequear visibilidad al cargar la página
+    // Ocultar y mostrar formulario con fadeIn
+    $('.form').hide().fadeIn(900);
+
+    // Chequear visibilidad al cargar la página inicialmente
     chequearVisibilidad();
 });
