@@ -29,5 +29,11 @@ $(document).ready(function () {
     }
 
     $(window).on('scroll resize', chequearVisibilidad);
+    $('.Card').hover(function() {
+        $(this).animate({ marginTop: '-10px' }, 200);
+    }, function() {
+        $(this).animate({ marginTop: '0' }, 200);
+    });
     chequearVisibilidad(); 
+
 });
