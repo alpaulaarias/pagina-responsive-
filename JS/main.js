@@ -4,6 +4,12 @@ $(document).ready(function () {
     }, function() {
         $(this).css('transform', 'rotate(0deg)');
     });
+
+    $('#Nombre').hover(function() {
+        $(this).animate({ fontSize: '65px' }, 200);
+    }, function() {
+        $(this).animate({ fontSize: '60px' }, 200);
+    });
     
     // Manejo del botón de menú
     $('#btn-menu').click(function () {
@@ -56,16 +62,16 @@ $(document).ready(function () {
         $(this).stop().animate({
             backgroundColor: '#a2d2ff',
             scale: '1.1'
-        }, 300); // Duración de la animación en milisegundos
+        }, 300); 
     }, function() {
         $(this).stop().animate({
             backgroundColor: '',
             scale: '1'
-        }, 300); // Duración de la animación en milisegundos
+        }, 300); 
     });  
 
     $('.form').hide();
-    $('.form').fadeIn(800);
+    $('.form').fadeIn(900);
     // Chequear visibilidad al cargar la página
     chequearVisibilidad();
 });

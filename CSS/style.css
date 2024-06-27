@@ -87,9 +87,7 @@ ul li a:hover {
   font-family: "Lilita One", sans-serif;
   transition: transform 0.5;
 }
-#Nombre:hover {
-  transform: translateY(-10px);
-}
+
 .niveles {
   display: inline;
   font-size: 18px;
