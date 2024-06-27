@@ -18,7 +18,6 @@ $(document).ready(function() {
     $('#btn-menu').click(function() {
         var $btnMenuSpan = $('.btn-menu span');
         var $etiquetas = $('.etiquetas');
-
         if ($btnMenuSpan.hasClass('fa fa-bars')) {
             $btnMenuSpan.removeClass('fa fa-bars').addClass('fa fa-close');
             $etiquetas.css('left', '0');
