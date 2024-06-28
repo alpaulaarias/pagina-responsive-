@@ -257,23 +257,27 @@ form {
 }
 
 .Card{
+    display: flex;
+    flex-direction: column;
     width: 325px;
-    background-color: #f0f0f0;
+    height: 450px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin: 20px;
-    
+    background-color: #94c7ec;
 }
+
 .Card img{
     width: 100%;
     height: auto;
-
-
 }
+
 .Card-content{
     padding: 16px;
+    background-color: #94c7ec;
 }
+
 .Card-content h3{
     font-size: 28px;
     margin-bottom: 8px;
@@ -290,6 +294,11 @@ form {
     text-decoration: none;
     border-radius: 4px;
     margin-top: 16px;
+}
+
+.btn-card {
+    display: flex;
+    justify-content: center;
 }
 
 
